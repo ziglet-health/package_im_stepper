@@ -28,11 +28,17 @@ class IconStepper extends StatelessWidget {
   /// The color of the step when it is not reached.
   final Color? stepColor;
 
+  /// The color of the icon for the non-active step
+  final Color? stepIconColor;
+
   /// The amount of padding inside a step.
   final double stepPadding;
 
   /// The color of a step when it is reached.
   final Color? activeStepColor;
+
+  /// The color of the icon for the active step
+  final Color? activeStepIconColor;
 
   /// The border color of a step when it is reached.
   final Color? activeStepBorderColor;
@@ -83,8 +89,10 @@ class IconStepper extends StatelessWidget {
     this.onStepReached,
     this.direction = Axis.horizontal,
     this.stepColor,
+    this.stepIconColor,
     this.stepPadding = 1.0,
     this.activeStepColor,
+    this.activeStepIconColor,
     this.activeStepBorderColor,
     this.activeStepBorderWidth = 0.5,
     this.activeStepBorderPadding = 5.0,
@@ -103,7 +111,7 @@ class IconStepper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseStepper(
-      children: _iconsWithSizeOverridden(),
+      children: _iconsWithSizeOverridden(context),
       nextPreviousButtonsDisabled: enableNextPreviousButtons,
       stepTappingDisabled: enableStepTapping,
       previousButtonIcon: previousButtonIcon,
@@ -130,11 +138,11 @@ class IconStepper extends StatelessWidget {
   }
 
   // Overrides the size of the icons to almost fit the step.
-  List<Icon> _iconsWithSizeOverridden() {
+  List<Icon> _iconsWithSizeOverridden(BuildContext context) {
     return List.generate(icons!.length, (index) {
       return Icon(
         icons![index].icon,
-        color: icons![index].color,
+        color: activeStep == index ? activeStepIconColor ?? Theme.of(context).accentIconTheme.color : Theme.of(context).iconTheme.color,
         size: stepRadius * 1.2,
       );
     });
