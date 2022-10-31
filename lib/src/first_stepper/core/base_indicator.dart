@@ -31,7 +31,7 @@ class BaseIndicator extends StatelessWidget {
   /// The amount of margin around each side of the indicator.
   final double margin;
 
-  BaseIndicator({
+  const BaseIndicator({
     this.isSelected = false,
     this.child,
     this.onPressed,

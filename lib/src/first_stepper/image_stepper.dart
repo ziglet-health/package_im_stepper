@@ -73,7 +73,7 @@ class ImageStepper extends StatelessWidget {
   final AlignmentGeometry alignment;
 
   /// Creates an ImageStepper widget.
-  ImageStepper({
+  const ImageStepper({
     this.images,
     this.enableNextPreviousButtons = true,
     this.enableStepTapping = true,

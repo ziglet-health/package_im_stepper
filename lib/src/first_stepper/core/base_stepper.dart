@@ -129,7 +129,7 @@ class _BaseStepperState extends State<BaseStepper> {
   @override
   void initState() {
     _selectedIndex = widget.activeStep;
-    this._scrollController = ScrollController();
+    _scrollController = ScrollController();
     super.initState();
   }
 
@@ -196,7 +196,7 @@ class _BaseStepperState extends State<BaseStepper> {
       child: SingleChildScrollView(
         scrollDirection: widget.direction,
         controller: _scrollController,
-        physics: widget.scrollingDisabled ? NeverScrollableScrollPhysics() : ClampingScrollPhysics(),
+        physics: widget.scrollingDisabled ? const NeverScrollableScrollPhysics() : const ClampingScrollPhysics(),
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 8.0),
           padding: const EdgeInsets.all(8.0),

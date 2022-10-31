@@ -76,7 +76,7 @@ class NumberStepper extends StatelessWidget {
   final AlignmentGeometry alignment;
 
   /// Creates a NumberStepper widget.
-  NumberStepper({
+  const NumberStepper({
     this.numbers,
     this.enableNextPreviousButtons = true,
     this.enableStepTapping = true,

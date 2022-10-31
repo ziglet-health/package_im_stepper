@@ -80,7 +80,7 @@ class IconStepper extends StatelessWidget {
   final AlignmentGeometry alignment;
 
   /// Creates an IconStepper widget.
-  IconStepper({
+  const IconStepper({
     this.icons,
     this.enableNextPreviousButtons = true,
     this.enableStepTapping = true,

@@ -129,7 +129,7 @@ class _DotStepperState extends State<DotStepper>
   @override
   void initState() {
     _animationController = AnimationController(
-      duration: Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 400),
       vsync: this,
     )..addListener(() {
         setState(() {});

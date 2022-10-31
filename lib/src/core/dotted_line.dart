@@ -15,7 +15,7 @@ class DottedLine extends StatelessWidget {
 
   final Axis axis;
 
-  DottedLine({
+  const DottedLine({
     this.length = 50.0,
     this.color = Colors.grey,
     this.dotRadius = 2.0,

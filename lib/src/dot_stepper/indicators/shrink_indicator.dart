@@ -28,7 +28,7 @@ class ShinkIndicator extends IndicatorPainter {
             : yDistanceBetweenOldAndActiveDot,
       ).animate(
         CurvedAnimation(
-          curve: Interval(0.0, 0.3),
+          curve: const Interval(0.0, 0.3),
           parent: animationController!,
         ),
       );
@@ -40,7 +40,7 @@ class ShinkIndicator extends IndicatorPainter {
       end: -dotRadius! / 2,
     ).animate(
       CurvedAnimation(
-        curve: Interval(0.5, 1.0),
+        curve: const Interval(0.5, 1.0),
         parent: animationController!,
       ),
     );

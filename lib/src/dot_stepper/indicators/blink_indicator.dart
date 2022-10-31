@@ -28,7 +28,7 @@ class BlinkIndicator extends IndicatorPainter {
             : yDistanceBetweenOldAndActiveDot,
       ).animate(
         CurvedAnimation(
-          curve: Interval(0.0, 0.3),
+          curve: const Interval(0.0, 0.3),
           parent: animationController!,
         ),
       );
@@ -40,7 +40,7 @@ class BlinkIndicator extends IndicatorPainter {
       end: 0.0,
     ).animate(
       CurvedAnimation(
-        curve: Interval(0.4, 1.0),
+        curve: const Interval(0.4, 1.0),
         parent: animationController!,
       ),
     );
